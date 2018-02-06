@@ -17,8 +17,10 @@ namespace Latihan1
 
         private void BtnTambah_Clicked(object sender, EventArgs e)
         {
-
-            DisplayAlert("Keterangan", "Tombol Tambah Dipilih !", "OK");
+            double bil1 = Convert.ToDouble(txtBil1.Text);
+            double bil2 = Convert.ToDouble(txtBil2.Text);
+            double hasil = bil1 + bil2;
+            DisplayAlert("Keterangan",String.Format("Hasil {0}+{1}={2}",bil1,bil2,hasil), "OK");
         }
     }
 }
