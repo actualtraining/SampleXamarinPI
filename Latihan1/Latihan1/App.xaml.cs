@@ -12,8 +12,7 @@ namespace Latihan1
 		public App ()
 		{
 			InitializeComponent();
-
-			MainPage = new Latihan1.MainPage();
+            MainPage = new ContohAbsolute();
 		}
 
 		protected override void OnStart ()
