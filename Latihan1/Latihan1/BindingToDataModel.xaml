@@ -6,7 +6,7 @@
         <ListView ItemsSource="{Binding ListBerita}" ItemTapped="ListBerita_ItemTapped">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding Judul}" Detail="{Binding Keterangan}" 
+                    <ImageCell ImageSource="{Binding Gambar}" Text="{Binding Judul}" Detail="{Binding Keterangan}" 
                               DetailColor="Blue" />
                 </DataTemplate>
             </ListView.ItemTemplate>

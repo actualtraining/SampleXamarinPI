@@ -18,9 +18,12 @@ namespace Latihan1.ViewModels
         {
             listBerita = new List<Berita>()
             {
-                new Berita{Judul="Belajar Xamarin Forms",Keterangan="Belajar menggunakan listview di Xamarin"},
-                new Berita{Judul="Menggunakan Layanan One Signal",Keterangan="Menggunakan One Signal untuk layanan push notification"},
-                new Berita{Judul="ASP.NET Web API",Keterangan="Menggunakan Web API untuk backend"}
+                new Berita{Judul="Belajar Xamarin Forms",Keterangan="Belajar menggunakan listview di Xamarin",
+                Gambar="monkey1.png"},
+                new Berita{Judul="Menggunakan Layanan One Signal",Keterangan="Menggunakan One Signal untuk layanan push notification",
+                Gambar="monkey2.png"},
+                new Berita{Judul="ASP.NET Web API",Keterangan="Menggunakan Web API untuk backend",
+                Gambar="monkey3.png"}
             };
 
         }

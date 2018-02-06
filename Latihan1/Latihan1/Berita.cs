@@ -8,5 +8,6 @@ namespace Latihan1
     {
         public string Judul { get; set; }
         public string Keterangan { get; set; }
+        public string Gambar { get; set; }
     }
 }
