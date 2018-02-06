@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Latihan1.ContohGrid" Title="Contoh GridView">
+    <ContentPage.Content>
+        <Grid ColumnSpacing="4" RowSpacing="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="End"
+                  VerticalTextAlignment="Center" Text="Full Name :" />
+            <Entry Grid.Row="0" Grid.Column="1" Placeholder="insert full name" />
+            <Label Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="End" 
+                   VerticalTextAlignment="Center" Text="Address :" />
+            <Entry Grid.Row="1" Grid.Column="1" Placeholder="insert address" />
+            <StackLayout Orientation="Horizontal" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+                <Button Text="New" />
+                <Button Text="Edit" />
+            </StackLayout>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
