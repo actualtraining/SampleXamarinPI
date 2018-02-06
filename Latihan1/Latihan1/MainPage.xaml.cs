@@ -17,6 +17,7 @@ namespace Latihan1
 
         private void BtnTambah_Clicked(object sender, EventArgs e)
         {
+            //sample click event
             double bil1 = Convert.ToDouble(txtBil1.Text);
             double bil2 = Convert.ToDouble(txtBil2.Text);
             double hasil = bil1 + bil2;
