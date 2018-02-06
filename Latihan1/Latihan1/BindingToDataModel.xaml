@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Latihan1.BindingToDataModel">
     <ContentPage.Content>
-        <ListView ItemsSource="{Binding ListBerita}">
+        <ListView ItemsSource="{Binding ListBerita}" ItemTapped="ListBerita_ItemTapped">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell Text="{Binding Judul}" Detail="{Binding Keterangan}" 

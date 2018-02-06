@@ -12,7 +12,7 @@ namespace Latihan1
 		public App ()
 		{
 			InitializeComponent();
-            MainPage = new SimpleList();
+            MainPage = new BindingToDataModel();
 		}
 
 		protected override void OnStart ()
