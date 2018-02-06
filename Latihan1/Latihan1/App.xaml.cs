@@ -12,7 +12,7 @@ namespace Latihan1
 		public App ()
 		{
 			InitializeComponent();
-            MainPage = new ContohAbsolute();
+            MainPage = new ContohRelativeLayout();
 		}
 
 		protected override void OnStart ()
