@@ -9,6 +9,7 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
@@ -24,8 +25,11 @@
             <StackLayout Orientation="Horizontal" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
                 <Button Text="Kirim Nilai" x:Name="btnKirim" />
                 <Button Text="Lihat Username" x:Name="btnUsername" />
+                
             </StackLayout>
-
+            <StackLayout Orientation="Horizontal" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+                <Button Text="Display Action Sheet" x:Name="btnDisplaySheet" />
+            </StackLayout>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

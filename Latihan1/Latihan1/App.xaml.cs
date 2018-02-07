@@ -14,7 +14,12 @@ namespace Latihan1
         {
             InitializeComponent();
             //MainPage = new NavigationPage(new MainPage());
-            Application.Current.Properties["Username"] = "erick";
+
+            if (!Application.Current.Properties.ContainsKey("Username"))
+            {
+                Application.Current.Properties["Username"] = "erick";
+            }
+            
 
             MainPage = new NavigationPage(new ContohGrid());
         }

@@ -17,6 +17,14 @@ namespace Latihan1
             InitializeComponent();
             btnKirim.Clicked += BtnKirim_Clicked;
             btnUsername.Clicked += BtnUsername_Clicked;
+            btnDisplaySheet.Clicked += BtnDisplaySheet_Clicked;
+        }
+
+        private async void BtnDisplaySheet_Clicked(object sender, EventArgs e)
+        {
+            string action = await DisplayActionSheet("Options", "Cancel", null,
+                "C#", "Java", "Kotlin", "Go", "Erlang");
+            await DisplayAlert("Keterangan", "Anda memilih: " + action, "OK");
         }
 
         private async void BtnUsername_Clicked(object sender, EventArgs e)
