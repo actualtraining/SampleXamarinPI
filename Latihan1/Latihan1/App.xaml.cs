@@ -14,7 +14,7 @@ namespace Latihan1
 		{
 			InitializeComponent();
             //MainPage = new NavigationPage(new MainPage());
-            MainPage = new SampleTabPage();
+            MainPage = new NavigationPage(new ContohGrid());
 		}
 
 		protected override void OnStart ()

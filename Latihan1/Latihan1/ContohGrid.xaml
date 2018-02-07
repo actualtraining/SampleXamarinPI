@@ -17,12 +17,12 @@
 
             <Label Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="End"
                   VerticalTextAlignment="Center" Text="Full Name :" />
-            <Entry Grid.Row="0" Grid.Column="1" Placeholder="insert full name" />
+            <Entry x:Name="txtName" Grid.Row="0" Grid.Column="1" Placeholder="insert full name" />
             <Label Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="End" 
                    VerticalTextAlignment="Center" Text="Address :" />
-            <Entry Grid.Row="1" Grid.Column="1" Placeholder="insert address" />
+            <Entry x:Name="txtAddress" Grid.Row="1" Grid.Column="1" Placeholder="insert address" />
             <StackLayout Orientation="Horizontal" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
-                <Button Text="New" />
+                <Button Text="Kirim Nilai" x:Name="btnKirim" />
                 <Button Text="Edit" />
             </StackLayout>
 
