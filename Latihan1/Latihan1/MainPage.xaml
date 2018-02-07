@@ -5,8 +5,11 @@
              x:Class="Latihan1.MainPage" Title="Simple Calc">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem x:Name="menuCustomList" Text="Custom List" Order="Secondary" Clicked="BtnModal_Clicked" />
-        <ToolbarItem x:Name="menuContohGrid" Text="Contoh Grid" Order="Primary" Icon="ic_add" Clicked="BtnGrid_Clicked" />
+        <ToolbarItem x:Name="menuCustomList" Text="Custom List" Order="Secondary" 
+                     Clicked="BtnModal_Clicked" />
+        <ToolbarItem x:Name="menuContohGrid" Text="Contoh Grid" Order="Primary" 
+                     Icon="ic_add" Clicked="BtnGrid_Clicked" />
+        <ToolbarItem x:Name="menuTabbed" Text="Tab Page" Order="Secondary" />
     </ContentPage.ToolbarItems>
     <StackLayout>
         <Label Text="Bilangan 1" />

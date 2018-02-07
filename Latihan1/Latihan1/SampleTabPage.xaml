@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:Latihan1;assembly=Latihan1"
+             x:Class="Latihan1.SampleTabPage">
+  <!--Pages can be added as references or inline-->
+    <TabbedPage.Children>
+        <local:ContohGrid Title="Contoh Grid" Icon="ic_add.png" />
+        <local:ContohRelativeLayout Title="Contoh Relative" Icon="icon.png" />
+        <local:SimpleList Title="Simple List" Icon="icon.png" />
+    </TabbedPage.Children>
+   
+</TabbedPage>
