@@ -3,34 +3,38 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Latihan1.CustomListPage" Title="Daftar Berita">
     <ContentPage.Content>
-        <ListView ItemsSource="{Binding ListBerita}" HasUnevenRows="true">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
+        <StackLayout>
+            <ListView ItemsSource="{Binding ListBerita}" HasUnevenRows="true">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
 
-                            <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Source="{Binding Gambar}" WidthRequest="80"/>
-                            <Label Text="{Binding Judul}" Grid.Column="1" Grid.Row="0" FontSize="Small" TextColor="Red" />
-                            <Label Text="{Binding Pengarang}" Grid.Column="1" Grid.Row="1" FontSize="Small" TextColor="Green"/>
-                            <StackLayout Orientation="Horizontal" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
-                                <Button Text="Edit" FontSize="Micro" 
+                                <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Source="{Binding Gambar}" WidthRequest="80"/>
+                                <Label Text="{Binding Judul}" Grid.Column="1" Grid.Row="0" FontSize="Small" TextColor="Red" />
+                                <Label Text="{Binding Pengarang}" Grid.Column="1" Grid.Row="1" FontSize="Small" TextColor="Green"/>
+                                <StackLayout Orientation="Horizontal" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+                                    <Button Text="Edit" FontSize="Micro" 
                                         HeightRequest="40" Command="{Binding EditCommand}" />
-                                <Button Text="Delete" FontSize="Micro" 
+                                    <Button Text="Delete" FontSize="Micro" 
                                         HeightRequest="40" Command="{Binding DeleteCommand}" />
-                            </StackLayout>
-                        </Grid>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button x:Name="btnBack" Text="Back To Main Page" />
+        </StackLayout>
+       
     </ContentPage.Content>
 </ContentPage>

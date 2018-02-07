@@ -17,6 +17,13 @@ namespace Latihan1
         {
             InitializeComponent();
             BindingContext = new BeritaViewModel(DisplayAlert);
+
+            btnBack.Clicked += BtnBack_Clicked;
+        }
+
+        private async void BtnBack_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
         }
     }
 }
