@@ -15,7 +15,19 @@ namespace Latihan1
         public MyMasterPage()
         {
             InitializeComponent();
-            
+            masterPageMenu.ListView.ItemSelected += ListView_ItemSelected;
+        }
+
+        private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var item = e.SelectedItem as MasterPageMenuItem;
+            if (item != null)
+            {
+                Detail = new NavigationPage(
+                    (Page)Activator.CreateInstance(item.TargetType));
+                masterPageMenu.ListView.SelectedItem = null;
+                IsPresented = false;
+            }
         }
     }
 }
