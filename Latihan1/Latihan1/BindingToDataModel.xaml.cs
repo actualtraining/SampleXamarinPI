@@ -16,7 +16,7 @@ namespace Latihan1
         public BindingToDataModel()
         {
             InitializeComponent();
-            BindingContext = new BeritaViewModel();
+            BindingContext = new BeritaViewModel(DisplayAlert);
         }
 
         private void ListBerita_ItemTapped(object sender, ItemTappedEventArgs e)

@@ -16,7 +16,7 @@ namespace Latihan1
         public CustomListPage()
         {
             InitializeComponent();
-            BindingContext = new BeritaViewModel();
+            BindingContext = new BeritaViewModel(DisplayAlert);
         }
     }
 }

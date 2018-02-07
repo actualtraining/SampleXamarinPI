@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Latihan1.ViewModels
 {
     public class BeritaViewModel : BindableObject
     {
+        private Func<string, string, string, Task> displayAlert;
+
         private List<Berita> listBerita;
         public List<Berita> ListBerita
         {
@@ -14,8 +17,11 @@ namespace Latihan1.ViewModels
             set { listBerita = value; OnPropertyChanged("ListBerita"); }
         }
 
-        public BeritaViewModel()
+        public BeritaViewModel(Func<string,string,string,Task> displayAlert)
         {
+
+            this.displayAlert = displayAlert;
+
             listBerita = new List<Berita>()
             {
                 new Berita{Judul="Belajar Xamarin Forms",Keterangan="Belajar menggunakan listview di Xamarin",
@@ -26,6 +32,15 @@ namespace Latihan1.ViewModels
                 Gambar="monkey3.png",Pengarang="Ani",Tanggal=new DateTime(2018,2,10)}
             };
 
+            MessagingCenter.Subscribe<Berita>(this, "EditRequested", EditRequested);
+
+        }
+
+        private void EditRequested(Berita obj)
+        {
+            obj.Judul += " - diedit";
+            //obj.Pengarang += "- diedit";
+            displayAlert.Invoke("Tombol Edit", obj.Judul + " dipilih", "OK");
         }
     }
 }

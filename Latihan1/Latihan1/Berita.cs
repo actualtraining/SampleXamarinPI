@@ -52,8 +52,14 @@ namespace Latihan1
             MessagingCenter.Send<Berita>(this, "DeleteRequested");
         }
 
-        public string Pengarang { get; set; }
+        private string pengarang;
+        public string Pengarang
+        {
+            get { return pengarang; }
+            set { pengarang = value; OnPropertyChanged("Pengarang"); }
+        }
+
         public DateTime Tanggal { get; set; }
-        public string Gambar { get; set; }
+        public string Gambar { get; set;  }
     }
 }

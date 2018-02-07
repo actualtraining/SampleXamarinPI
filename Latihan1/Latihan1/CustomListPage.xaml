@@ -22,8 +22,10 @@
                             <Label Text="{Binding Judul}" Grid.Column="1" Grid.Row="0" FontSize="Small" TextColor="Red" />
                             <Label Text="{Binding Pengarang}" Grid.Column="1" Grid.Row="1" FontSize="Small" TextColor="Green"/>
                             <StackLayout Orientation="Horizontal" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
-                                <Button Text="Edit" FontSize="Micro" HeightRequest="40" />
-                                <Button Text="Delete" FontSize="Micro" HeightRequest="40" />
+                                <Button Text="Edit" FontSize="Micro" 
+                                        HeightRequest="40" Command="{Binding EditCommand}" />
+                                <Button Text="Delete" FontSize="Micro" 
+                                        HeightRequest="40" Command="{Binding DeleteCommand}" />
                             </StackLayout>
                         </Grid>
                     </ViewCell>
