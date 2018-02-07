@@ -3,13 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Latihan1"
              x:Class="Latihan1.MainPage" Title="Simple Calc">
-
+   
     <StackLayout>
         <Label Text="Bilangan 1" />
-        <Entry x:Name="txtBil1" Placeholder="masukan bilangan 1" />
+        <Entry x:Name="txtBil1" Placeholder="masukan bilangan 1" Style="{DynamicResource myEntry}" />
         <Label Text="Hello Xamarin 2" />
         <Entry x:Name="txtBil2" Placeholder="masukan bilangan 2" />
-    <StackLayout Orientation="Horizontal">
+        
+        
+        <StackLayout Orientation="Horizontal">
             <Button x:Name="btnTambah" Text="Tambah" FontSize="Micro" HeightRequest="40" />
         <Button Text="Edit"  FontSize="Micro" HeightRequest="40" />
         <Button Text="Delete"  FontSize="Micro" HeightRequest="40" />

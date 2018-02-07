@@ -6,5 +6,49 @@
 
 		<!-- Application resource dictionary -->
 
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="Green" />
+                <Setter Property="FontSize" Value="Small" />
+            </Style>
+
+            <Style TargetType="Label" x:Key="myLabel">
+                <Setter Property="TextColor" Value="Magenta" />
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="FontFamily" Value="Arial" />
+            </Style>
+
+            <Style TargetType="Entry">
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="TextColor" Value="Red" />
+            </Style>
+
+            <Style TargetType="Entry" x:Key="myEntry"> 
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="TextColor" Value="Blue" />
+            </Style>
+
+            <Color x:Key="ListTextColor">#000000</Color>
+
+            <Style x:Key="ListTitleStyle" TargetType="Label">
+                <Setter Property="HorizontalOptions"
+                        Value="Start" />
+                <Setter Property="VerticalOptions"
+                        Value="Center" />
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="TextColor" Value="{DynamicResource ListTextColor}" />
+            </Style>
+
+            <Style x:Key="ListDescriptionStyle" TargetType="Label">
+                <Setter Property="HorizontalOptions"
+                        Value="Start" />
+                <Setter Property="VerticalOptions"
+                        Value="Start" />
+                <Setter Property="TextColor" Value="{DynamicResource ListTextColor}" />
+                <Setter Property="Opacity" Value="0.4" />
+            </Style>
+
+        </ResourceDictionary>
+
 	</Application.Resources>
 </Application>

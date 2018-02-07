@@ -12,7 +12,7 @@ namespace Latihan1
 		public App ()
 		{
 			InitializeComponent();
-            MainPage = new CustomListPage();
+            MainPage = new MainPage();
 		}
 
 		protected override void OnStart ()
