@@ -23,7 +23,7 @@
             <Entry x:Name="txtAddress" Grid.Row="1" Grid.Column="1" Placeholder="insert address" />
             <StackLayout Orientation="Horizontal" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
                 <Button Text="Kirim Nilai" x:Name="btnKirim" />
-                <Button Text="Edit" />
+                <Button Text="Lihat Username" x:Name="btnUsername" />
             </StackLayout>
 
         </Grid>

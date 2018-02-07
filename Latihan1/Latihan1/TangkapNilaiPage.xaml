@@ -5,6 +5,7 @@
     <ContentPage.Content>
         <StackLayout>
             <Label x:Name="lblKeterangan" FontSize="Medium" />
+            <Button x:Name="btnUsername" Text="Tampil Username" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

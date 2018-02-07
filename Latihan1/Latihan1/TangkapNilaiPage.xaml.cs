@@ -17,6 +17,12 @@ namespace Latihan1
             InitializeComponent();
         }
 
+        private async void BtnUsername_Clicked(object sender, EventArgs e)
+        {
+            string username = App.Current.Properties["Username"].ToString();
+            await DisplayAlert("Keterangan", "Username: " + username, "OK");
+        }
+
         private string name;
         private string address;
         public TangkapNilaiPage(string name,string address)
@@ -24,6 +30,8 @@ namespace Latihan1
             InitializeComponent();
             this.name = name;
             this.address = address;
+
+            btnUsername.Clicked += BtnUsername_Clicked;
         }
 
         protected override void OnAppearing()

@@ -16,6 +16,15 @@ namespace Latihan1
         {
             InitializeComponent();
             btnKirim.Clicked += BtnKirim_Clicked;
+            btnUsername.Clicked += BtnUsername_Clicked;
+        }
+
+        private async void BtnUsername_Clicked(object sender, EventArgs e)
+        {
+            string username = App.Current.Properties["Username"].ToString();
+
+            App.Current.Properties["Username"] = "budi";
+            await DisplayAlert("Keterangan", "Username: " + username, "OK");
         }
 
         private async void BtnKirim_Clicked(object sender, EventArgs e)
