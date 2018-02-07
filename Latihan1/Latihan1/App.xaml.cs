@@ -9,10 +9,11 @@ namespace Latihan1
 {
 	public partial class App : Application
 	{
+
 		public App ()
 		{
 			InitializeComponent();
-            MainPage = new CustomListPage();
+            MainPage = new NavigationPage(new MainPage());
 		}
 
 		protected override void OnStart ()

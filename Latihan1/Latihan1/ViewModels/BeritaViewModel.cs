@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -8,21 +9,21 @@ namespace Latihan1.ViewModels
 {
     public class BeritaViewModel : BindableObject
     {
-        private Func<string, string, string, Task> displayAlert;
+        private Func<string, string, string,string,Task<bool>> displayAlert;
 
-        private List<Berita> listBerita;
-        public List<Berita> ListBerita
+        private ObservableCollection<Berita> listBerita;
+        public ObservableCollection<Berita> ListBerita
         {
             get { return listBerita; }
             set { listBerita = value; OnPropertyChanged("ListBerita"); }
         }
 
-        public BeritaViewModel(Func<string,string,string,Task> displayAlert)
+        public BeritaViewModel(Func<string,string,string,string, Task<bool>> displayAlert)
         {
 
             this.displayAlert = displayAlert;
 
-            listBerita = new List<Berita>()
+            listBerita = new ObservableCollection<Berita>()
             {
                 new Berita{Judul="Belajar Xamarin Forms",Keterangan="Belajar menggunakan listview di Xamarin",
                 Gambar="monkey1.png",Pengarang="Budi",Tanggal=new DateTime(2018,2,7)},
@@ -33,14 +34,23 @@ namespace Latihan1.ViewModels
             };
 
             MessagingCenter.Subscribe<Berita>(this, "EditRequested", EditRequested);
+            MessagingCenter.Subscribe<Berita>(this, "DeleteRequested", DeleteRequested);
+        }
 
+        private async void DeleteRequested(Berita obj)
+        {
+            bool result = await displayAlert.Invoke("Konfirmasi", "Apakah data " + obj.Judul + " yakin akan di delete", "Yes","No");
+            if (result)
+            {
+                listBerita.Remove(obj);
+            }
         }
 
         private void EditRequested(Berita obj)
         {
             obj.Judul += " - diedit";
             //obj.Pengarang += "- diedit";
-            displayAlert.Invoke("Tombol Edit", obj.Judul + " dipilih", "OK");
+            displayAlert.Invoke("Tombol Edit", obj.Judul + " dipilih", "OK","Cancel");
         }
     }
 }

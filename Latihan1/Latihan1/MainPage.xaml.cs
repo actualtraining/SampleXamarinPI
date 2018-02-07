@@ -13,7 +13,14 @@ namespace Latihan1
 		{
 			InitializeComponent();
             btnTambah.Clicked += BtnTambah_Clicked;
+
+            btnNavigateToCustom.Clicked += BtnNavigateToCustom_Clicked;
 		}
+
+        private async void BtnNavigateToCustom_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new CustomListPage());
+        }
 
         private void BtnTambah_Clicked(object sender, EventArgs e)
         {
