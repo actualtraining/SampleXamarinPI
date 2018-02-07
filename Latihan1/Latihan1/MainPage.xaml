@@ -7,10 +7,26 @@
     <StackLayout>
         <Label Text="Bilangan 1" />
         <Entry x:Name="txtBil1" Placeholder="masukan bilangan 1" Style="{DynamicResource myEntry}" />
-        <Label Text="Hello Xamarin 2" />
+        <Label Text="Hello Xamarin 2" Style="{StaticResource myLabel}" />
         <Entry x:Name="txtBil2" Placeholder="masukan bilangan 2" />
-        
-        
+        <Entry TextColor="White" x:Name="EntryStyleTrigger" Placeholder="Tap to identify">
+            <Entry.Triggers>
+                <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                    <Setter Property="BackgroundColor">
+                        <Setter.Value>
+                            <OnPlatform x:TypeArguments="Color" iOS="#8B60A8" Android="#8EC63F" />
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Text">
+                        <Setter.Value>
+                            <OnPlatform x:TypeArguments="x:String" iOS="iOS" Android="Android" />
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Entry.Triggers>
+        </Entry>
+
+
         <StackLayout Orientation="Horizontal">
             <Button x:Name="btnTambah" Text="Tambah" FontSize="Micro" HeightRequest="40" />
         <Button Text="Edit"  FontSize="Micro" HeightRequest="40" />
