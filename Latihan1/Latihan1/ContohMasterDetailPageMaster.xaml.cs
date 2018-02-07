@@ -33,11 +33,11 @@ namespace Latihan1
             {
                 MenuItems = new ObservableCollection<ContohMasterDetailPageMenuItem>(new[]
                 {
-                    new ContohMasterDetailPageMenuItem { Id = 0, Title = "Page 1" },
-                    new ContohMasterDetailPageMenuItem { Id = 1, Title = "Page 2" },
-                    new ContohMasterDetailPageMenuItem { Id = 2, Title = "Page 3" },
-                    new ContohMasterDetailPageMenuItem { Id = 3, Title = "Page 4" },
-                    new ContohMasterDetailPageMenuItem { Id = 4, Title = "Page 5" },
+                    new ContohMasterDetailPageMenuItem { Id = 0, Title = "Page 1",IconSource="icon.png" },
+                    new ContohMasterDetailPageMenuItem { Id = 1, Title = "Page 2",IconSource="icon.png" },
+                    new ContohMasterDetailPageMenuItem { Id = 2, Title = "Page 3",IconSource="icon.png" },
+                    new ContohMasterDetailPageMenuItem { Id = 3, Title = "Page 4",IconSource="icon.png" },
+                    new ContohMasterDetailPageMenuItem { Id = 4, Title = "Page 5",IconSource="icon.png" }
                 });
             }
             

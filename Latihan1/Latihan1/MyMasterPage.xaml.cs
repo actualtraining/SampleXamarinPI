@@ -23,8 +23,9 @@ namespace Latihan1
             var item = e.SelectedItem as MasterPageMenuItem;
             if (item != null)
             {
-                Detail = new NavigationPage(
-                    (Page)Activator.CreateInstance(item.TargetType));
+                var page = (Page)Activator.CreateInstance(item.TargetType);
+                page.Title = item.Title;
+                Detail = new NavigationPage(page);
                 masterPageMenu.ListView.SelectedItem = null;
                 IsPresented = false;
             }
