@@ -9,12 +9,13 @@ using Xamarin.Forms.Xaml;
 
 namespace Latihan1
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class MyMasterPage : MasterDetailPage
-	{
-		public MyMasterPage ()
-		{
-			InitializeComponent ();
-		}
-	}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class MyMasterPage : MasterDetailPage
+    {
+        public MyMasterPage()
+        {
+            InitializeComponent();
+            
+        }
+    }
 }
