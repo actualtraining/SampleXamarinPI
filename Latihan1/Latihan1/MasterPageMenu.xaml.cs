@@ -20,7 +20,7 @@ namespace Latihan1
             var masterPageItem = new List<MasterPageMenuItem>();
             masterPageItem.Add(new MasterPageMenuItem
             {
-                Title = "Main Menu",
+                Title = "MainMenu",
                 IconSource = "icon.png",
                 TargetType = typeof(MainPage)
             });

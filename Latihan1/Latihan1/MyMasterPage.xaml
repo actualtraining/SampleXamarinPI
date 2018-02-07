@@ -9,7 +9,7 @@
     <MasterDetailPage.Detail>
         <NavigationPage>
             <x:Arguments>
-                <local:MainPage />
+                <local:MenuUtama Title="Main Menu" />
             </x:Arguments>
         </NavigationPage>
     </MasterDetailPage.Detail>

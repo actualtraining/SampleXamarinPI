@@ -20,7 +20,7 @@ namespace Latihan1
                 Application.Current.Properties["Username"] = "erick";
             }
 
-            MainPage = new MyMasterPage();
+            MainPage = new ContohMasterDetailPage();
         }
 
         protected override void OnStart()
