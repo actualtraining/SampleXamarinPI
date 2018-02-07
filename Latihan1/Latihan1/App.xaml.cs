@@ -19,9 +19,8 @@ namespace Latihan1
             {
                 Application.Current.Properties["Username"] = "erick";
             }
-            
 
-            MainPage = new NavigationPage(new ContohGrid());
+            MainPage = new SampleTabPage();
         }
 
         protected override void OnStart()

@@ -9,5 +9,4 @@
         <local:ContohRelativeLayout Title="Contoh Relative" Icon="icon.png" />
         <local:SimpleList Title="Simple List" Icon="icon.png" />
     </TabbedPage.Children>
-   
 </TabbedPage>
