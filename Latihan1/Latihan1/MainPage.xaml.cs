@@ -15,7 +15,17 @@ namespace Latihan1
             btnTambah.Clicked += BtnTambah_Clicked;
 
             btnNavigateToCustom.Clicked += BtnNavigateToCustom_Clicked;
+            btnModal.Clicked += BtnModal_Clicked;
 		}
+
+        private async void BtnModal_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new CustomListPage());
+        }
+        private async void BtnGrid_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ContohGrid());
+        }
 
         private async void BtnNavigateToCustom_Clicked(object sender, EventArgs e)
         {

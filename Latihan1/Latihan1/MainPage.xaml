@@ -4,6 +4,10 @@
              xmlns:local="clr-namespace:Latihan1"
              x:Class="Latihan1.MainPage" Title="Simple Calc">
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="menuCustomList" Text="Custom List" Order="Secondary" Clicked="BtnModal_Clicked" />
+        <ToolbarItem x:Name="menuContohGrid" Text="Contoh Grid" Order="Primary" Icon="ic_add" Clicked="BtnGrid_Clicked" />
+    </ContentPage.ToolbarItems>
     <StackLayout>
         <Label Text="Bilangan 1" />
         <Entry x:Name="txtBil1" Placeholder="masukan bilangan 1" Style="{DynamicResource myEntry}" />
@@ -34,6 +38,8 @@
         </StackLayout>
 
         <Button x:Name="btnNavigateToCustom" Text="Navigate To Custom List" FontSize="Small"
+                HeightRequest="40" />
+        <Button x:Name="btnModal" Text="Navigate List Page" FontSize="Small"
                 HeightRequest="40" />
     </StackLayout>
 

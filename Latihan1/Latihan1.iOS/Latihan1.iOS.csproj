@@ -137,4 +137,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\monkey3.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_add.png" />
+  </ItemGroup>
 </Project>
